@@ -1,13 +1,140 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+*,
+::after,
+::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.App {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid yellowgreen;
+}
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.scenery {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bg1,
+.bg2 {
+  position: absolute;
+}
+.bg1 {
+  z-index: 10;
+}
+.bg2 {
+  z-index: 0 !important;
+  transform: translateX(100%);
+}
+
+.palm_bg1 {
+  top: -120px;
+  left: 20%;
+  z-index: 50;
+}
+.palm2_bg1 {
+  top: -220px;
+  height: 160px;
+  left: 80% !important;
+  z-index: 50;
+}
+.pawn_bg1 {
+  left: 50%;
+  z-index: 1 !important;
+}
+.rock_bg1 {
+  left: 5%;
+  top: -160px;
+}
+
+.knight_bg2 {
+  top: 0px;
+  left: 90%;
+}
+.palm1_small {
+  top: -100%;
+  left: 80% !important;
+}
+.pawn_bg2 {
+  top: -70%;
+  left: 40%;
+}
+.rock2_bg2 {
+  left: 15%;
+  top: 0%;
+}
+
+.sky,
+.earth {
+  position: absolute;
+  left: 0;
+  height: 50vh;
+  width: 100%;
+}
+
+.earth {
+  background: #eb125d
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_earth.jpg")
+    repeat-x 0 0 / 100% auto;
+  bottom: 0;
+}
+
+.sky {
+  background: #246e89
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_sky.jpg") repeat-x
+    100% 100% / auto 100%;
+  top: 0;
+}
+
+.alice_wrapper {
+  position: relative;
+  width: 470px;
+  height: 390px;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+}
+.alice_sprite {
+  z-index: 5;
+  top: unset;
+  left: unset;
+  transform: unset;
 }
